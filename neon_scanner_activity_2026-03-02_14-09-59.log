@@ -1,0 +1,477 @@
+[2026-03-02 14:09:59] READY... WAITING FOR TARGET INPUT.
+LOG FILE SET TO: neon_scanner_activity_2026-03-02_14-09-59.log
+[2026-03-02 14:09:59] --- SESSION STARTED ---
+[2026-03-02 14:27:33] ==================================================
+[2026-03-02 14:27:33] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.30
+[2026-03-02 14:27:33] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:27:33] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:27:33] -----------------------------------------------------------------
+[2026-03-02 14:27:33] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.30
+[2026-03-02 14:27:33] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:27 +0100
+[2026-03-02 14:27:36] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:27:36] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:27:36] Nmap done: 1 IP address (1 host up) scanned in 2.94 seconds
+[2026-03-02 14:27:36] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:27:36] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:27:36] 
+[2026-03-02 14:27:36] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:27 Hora estándar romance
+[2026-03-02 14:27:36] SENT (0.0960s) TCP 192.168.20.33:56144 > 192.168.20.30:502 S ttl=64 id=52752 iplen=52  seq=4215817417 win=1480
+[2026-03-02 14:27:37] RCVD (0.0990s) TCP 192.168.20.30:502 > 192.168.20.33:56144 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:27:37] 
+[2026-03-02 14:27:37] Max rtt: 3.000ms | Min rtt: 3.000ms | Avg rtt: 3.000ms
+[2026-03-02 14:27:37] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:27:37] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:27:37] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:27:37] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:27:37] 
+[2026-03-02 14:27:37] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:27 Hora estándar romance
+[2026-03-02 14:27:37] SENT (0.0940s) TCP 192.168.20.33:32425 > 192.168.20.30:102 S ttl=64 id=65297 iplen=52  seq=2657463625 win=1480
+[2026-03-02 14:27:38] RCVD (0.0970s) TCP 192.168.20.30:102 > 192.168.20.33:32425 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:27:38] 
+[2026-03-02 14:27:38] Max rtt: 3.000ms | Min rtt: 3.000ms | Avg rtt: 3.000ms
+[2026-03-02 14:27:38] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:27:38] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:27:38] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:27:38] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:27:38] 
+[2026-03-02 14:27:38] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:27 Hora estándar romance
+[2026-03-02 14:27:38] SENT (0.0930s) TCP 192.168.20.33:61270 > 192.168.20.30:4840 S ttl=64 id=20009 iplen=52  seq=938693838 win=1480
+[2026-03-02 14:27:39] RCVD (0.0950s) TCP 192.168.20.30:4840 > 192.168.20.33:61270 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:27:39] 
+[2026-03-02 14:27:39] Max rtt: 2.000ms | Min rtt: 2.000ms | Avg rtt: 2.000ms
+[2026-03-02 14:27:39] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:27:40] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:27:40] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:27:40] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.30 4840
+[2026-03-02 14:27:40] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:27:40] programa o archivo por lotes ejecutable.
+[2026-03-02 14:27:40] ==================================================
+[2026-03-02 14:27:40] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:28:14] ==================================================
+[2026-03-02 14:28:14] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.30
+[2026-03-02 14:28:14] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:28:14] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:28:14] -----------------------------------------------------------------
+[2026-03-02 14:28:14] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.30
+[2026-03-02 14:28:14] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:28 +0100
+[2026-03-02 14:28:14] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:28:14] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:28:14] Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+[2026-03-02 14:28:14] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:28:14] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:28:14] 
+[2026-03-02 14:28:14] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:28 Hora estándar romance
+[2026-03-02 14:28:14] SENT (0.0930s) TCP 192.168.20.33:31616 > 192.168.20.30:502 S ttl=64 id=28775 iplen=52  seq=1762587956 win=1480
+[2026-03-02 14:28:15] RCVD (0.0960s) TCP 192.168.20.30:502 > 192.168.20.33:31616 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:28:15] 
+[2026-03-02 14:28:15] Max rtt: 3.000ms | Min rtt: 3.000ms | Avg rtt: 3.000ms
+[2026-03-02 14:28:15] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:28:15] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:28:15] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:28:15] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:28:15] 
+[2026-03-02 14:28:15] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:28 Hora estándar romance
+[2026-03-02 14:28:15] SENT (0.0920s) TCP 192.168.20.33:55058 > 192.168.20.30:102 S ttl=64 id=59046 iplen=52  seq=3071096520 win=1480
+[2026-03-02 14:28:16] RCVD (0.0950s) TCP 192.168.20.30:102 > 192.168.20.33:55058 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:28:16] 
+[2026-03-02 14:28:16] Max rtt: 2.000ms | Min rtt: 2.000ms | Avg rtt: 2.000ms
+[2026-03-02 14:28:16] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:28:16] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:28:16] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:28:16] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.30 -c 1
+[2026-03-02 14:28:16] 
+[2026-03-02 14:28:16] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:28 Hora estándar romance
+[2026-03-02 14:28:16] SENT (0.0920s) TCP 192.168.20.33:47242 > 192.168.20.30:4840 S ttl=64 id=6768 iplen=52  seq=4023215339 win=1480
+[2026-03-02 14:28:17] RCVD (0.0950s) TCP 192.168.20.30:4840 > 192.168.20.33:47242 RA ttl=64 id=0 iplen=40  seq=0 win=0
+[2026-03-02 14:28:17] 
+[2026-03-02 14:28:17] Max rtt: 3.000ms | Min rtt: 3.000ms | Avg rtt: 3.000ms
+[2026-03-02 14:28:17] Raw packets sent: 1 (66B) | Rcvd: 1 (46B) | Lost: 0 (0.00%)
+[2026-03-02 14:28:17] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:28:17] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:28:17] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.30 4840
+[2026-03-02 14:28:17] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:28:17] programa o archivo por lotes ejecutable.
+[2026-03-02 14:28:17] ==================================================
+[2026-03-02 14:28:17] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:33:43] ==================================================
+[2026-03-02 14:33:43] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:33:43] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:33:43] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:33:43] -----------------------------------------------------------------
+[2026-03-02 14:33:43] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:33:43] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:33 +0100
+[2026-03-02 14:33:43] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:33:44] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:33:44] Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds
+[2026-03-02 14:33:44] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:33:44] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:33:44] 
+[2026-03-02 14:33:44] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:33 Hora estándar romance
+[2026-03-02 14:33:45] SENT (0.0910s) TCP 192.168.20.33:39066 > 192.168.20.1:502 S ttl=64 id=18889 iplen=52  seq=765576682 win=1480
+[2026-03-02 14:33:45] 
+[2026-03-02 14:33:45] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:33:45] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:33:45] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:33:45] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:33:45] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:33:45] 
+[2026-03-02 14:33:45] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:33 Hora estándar romance
+[2026-03-02 14:33:46] SENT (0.0910s) TCP 192.168.20.33:27160 > 192.168.20.1:102 S ttl=64 id=19985 iplen=52  seq=2028902489 win=1480
+[2026-03-02 14:33:46] 
+[2026-03-02 14:33:46] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:33:46] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:33:46] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:33:46] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:33:46] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:33:46] 
+[2026-03-02 14:33:46] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:33 Hora estándar romance
+[2026-03-02 14:33:47] SENT (0.0930s) TCP 192.168.20.33:24051 > 192.168.20.1:4840 S ttl=64 id=32747 iplen=52  seq=516910892 win=1480
+[2026-03-02 14:33:47] 
+[2026-03-02 14:33:47] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:33:47] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:33:47] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:33:47] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:33:47] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:33:48] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:33:48] programa o archivo por lotes ejecutable.
+[2026-03-02 14:33:48] ==================================================
+[2026-03-02 14:33:48] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:34:23] ==================================================
+[2026-03-02 14:34:23] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:34:23] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:34:23] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:34:23] -----------------------------------------------------------------
+[2026-03-02 14:34:23] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:34:23] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:34 +0100
+[2026-03-02 14:34:23] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:34:25] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:34:25] Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds
+[2026-03-02 14:34:25] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:34:25] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:34:25] 
+[2026-03-02 14:34:25] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:34 Hora estándar romance
+[2026-03-02 14:34:26] SENT (0.0920s) TCP 192.168.20.33:6218 > 192.168.20.1:502 S ttl=64 id=34825 iplen=52  seq=1730345867 win=1480
+[2026-03-02 14:34:26] 
+[2026-03-02 14:34:26] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:34:26] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:34:26] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:34:26] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:34:26] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:34:26] 
+[2026-03-02 14:34:26] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:34 Hora estándar romance
+[2026-03-02 14:34:27] SENT (0.0940s) TCP 192.168.20.33:49586 > 192.168.20.1:102 S ttl=64 id=64054 iplen=52  seq=692957115 win=1480
+[2026-03-02 14:34:27] 
+[2026-03-02 14:34:27] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:34:27] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:34:27] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:34:27] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:34:27] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:34:27] 
+[2026-03-02 14:34:27] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:34 Hora estándar romance
+[2026-03-02 14:34:28] SENT (0.0920s) TCP 192.168.20.33:39124 > 192.168.20.1:4840 S ttl=64 id=24317 iplen=52  seq=1098551339 win=1480
+[2026-03-02 14:34:28] 
+[2026-03-02 14:34:28] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:34:28] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:34:28] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:34:28] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:34:28] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:34:28] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:34:28] programa o archivo por lotes ejecutable.
+[2026-03-02 14:34:28] ==================================================
+[2026-03-02 14:34:28] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:34:56] ==================================================
+[2026-03-02 14:34:56] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:34:56] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:34:56] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:34:56] -----------------------------------------------------------------
+[2026-03-02 14:34:56] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:34:56] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:34 +0100
+[2026-03-02 14:34:56] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:34:58] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:34:58] Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds
+[2026-03-02 14:34:58] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:34:58] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:34:58] 
+[2026-03-02 14:34:58] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:34 Hora estándar romance
+[2026-03-02 14:34:59] SENT (0.0920s) TCP 192.168.20.33:1096 > 192.168.20.1:502 S ttl=64 id=25523 iplen=52  seq=203479016 win=1480
+[2026-03-02 14:34:59] 
+[2026-03-02 14:34:59] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:34:59] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:34:59] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:34:59] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:34:59] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:34:59] 
+[2026-03-02 14:34:59] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:34 Hora estándar romance
+[2026-03-02 14:35:00] SENT (0.0930s) TCP 192.168.20.33:27365 > 192.168.20.1:102 S ttl=64 id=23363 iplen=52  seq=1672875264 win=1480
+[2026-03-02 14:35:00] 
+[2026-03-02 14:35:00] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:35:00] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:35:00] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:35:00] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:35:00] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:35:00] 
+[2026-03-02 14:35:00] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:35 Hora estándar romance
+[2026-03-02 14:35:01] SENT (0.0950s) TCP 192.168.20.33:26929 > 192.168.20.1:4840 S ttl=64 id=31218 iplen=52  seq=151004079 win=1480
+[2026-03-02 14:35:01] 
+[2026-03-02 14:35:01] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:35:01] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:35:01] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:35:01] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:35:01] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:35:01] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:35:01] programa o archivo por lotes ejecutable.
+[2026-03-02 14:35:01] ==================================================
+[2026-03-02 14:35:01] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:35:12] ==================================================
+[2026-03-02 14:35:12] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:35:12] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:35:12] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:35:12] -----------------------------------------------------------------
+[2026-03-02 14:35:12] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:35:12] Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-02 14:35 +0100
+[2026-03-02 14:35:12] mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+[2026-03-02 14:35:13] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:35:13] Nmap done: 1 IP address (1 host up) scanned in 1.52 seconds
+[2026-03-02 14:35:13] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:35:13] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:35:13] 
+[2026-03-02 14:35:13] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:35 Hora estándar romance
+[2026-03-02 14:35:14] SENT (0.0920s) TCP 192.168.20.33:59434 > 192.168.20.1:502 S ttl=64 id=31123 iplen=52  seq=2303036061 win=1480
+[2026-03-02 14:35:14] 
+[2026-03-02 14:35:14] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:35:14] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:35:14] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:35:14] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:35:14] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:35:15] 
+[2026-03-02 14:35:15] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:35 Hora estándar romance
+[2026-03-02 14:35:16] SENT (0.0920s) TCP 192.168.20.33:6414 > 192.168.20.1:102 S ttl=64 id=27590 iplen=52  seq=2479450768 win=1480
+[2026-03-02 14:35:16] 
+[2026-03-02 14:35:16] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:35:16] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:35:16] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:35:16] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:35:16] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:35:16] 
+[2026-03-02 14:35:16] Starting Nping 0.7.98 ( https://nmap.org/nping ) at 2026-03-02 14:35 Hora estándar romance
+[2026-03-02 14:35:17] SENT (0.0910s) TCP 192.168.20.33:36666 > 192.168.20.1:4840 S ttl=64 id=49955 iplen=52  seq=3348521914 win=1480
+[2026-03-02 14:35:17] 
+[2026-03-02 14:35:17] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:35:17] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:35:17] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:35:17] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:35:17] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:35:17] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:35:17] programa o archivo por lotes ejecutable.
+[2026-03-02 14:35:17] ==================================================
+[2026-03-02 14:35:17] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:37:26] ==================================================
+[2026-03-02 14:37:26] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:37:26] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:37:26] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:37:26] -----------------------------------------------------------------
+[2026-03-02 14:37:26] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:37:26] Starting Nmap 7.92 ( https://nmap.org ) at 2026-03-02 14:37 Hora estándar romance
+[2026-03-02 14:37:29] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:37:29] Nmap done: 1 IP address (1 host up) scanned in 3.30 seconds
+[2026-03-02 14:37:29] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:37:29] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:37:29] 
+[2026-03-02 14:37:29] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:37 Hora estándar romance
+[2026-03-02 14:37:30] SENT (0.0930s) TCP 192.168.20.33:9350 > 192.168.20.1:502 S ttl=64 id=50226 iplen=52  seq=660572604 win=1480
+[2026-03-02 14:37:30] 
+[2026-03-02 14:37:30] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:37:30] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:37:30] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:37:30] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:37:30] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:37:30] 
+[2026-03-02 14:37:30] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:37 Hora estándar romance
+[2026-03-02 14:37:31] SENT (0.0940s) TCP 192.168.20.33:27834 > 192.168.20.1:102 S ttl=64 id=47086 iplen=52  seq=2643884377 win=1480
+[2026-03-02 14:37:31] 
+[2026-03-02 14:37:31] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:37:31] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:37:31] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:37:31] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:37:31] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:37:31] 
+[2026-03-02 14:37:31] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:37 Hora estándar romance
+[2026-03-02 14:37:32] SENT (0.0940s) TCP 192.168.20.33:45074 > 192.168.20.1:4840 S ttl=64 id=14989 iplen=52  seq=2298108375 win=1480
+[2026-03-02 14:37:32] 
+[2026-03-02 14:37:32] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:37:32] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:37:32] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:37:32] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:37:32] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:37:32] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:37:32] programa o archivo por lotes ejecutable.
+[2026-03-02 14:37:32] ==================================================
+[2026-03-02 14:37:32] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:39:21] ==================================================
+[2026-03-02 14:39:21] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:39:21] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:39:21] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:39:21] -----------------------------------------------------------------
+[2026-03-02 14:39:21] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:39:21] Starting Nmap 7.92 ( https://nmap.org ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:22] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:39:22] Nmap done: 1 IP address (1 host up) scanned in 1.62 seconds
+[2026-03-02 14:39:22] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:39:22] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:22] 
+[2026-03-02 14:39:22] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:23] SENT (0.0980s) TCP 192.168.20.33:25883 > 192.168.20.1:502 S ttl=64 id=26239 iplen=52  seq=3880501200 win=1480
+[2026-03-02 14:39:23] 
+[2026-03-02 14:39:23] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:23] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:23] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:23] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:39:23] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:24] 
+[2026-03-02 14:39:24] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:25] SENT (0.1030s) TCP 192.168.20.33:20959 > 192.168.20.1:102 S ttl=64 id=8849 iplen=52  seq=800133540 win=1480
+[2026-03-02 14:39:25] 
+[2026-03-02 14:39:25] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:25] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:25] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:25] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:39:25] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:25] 
+[2026-03-02 14:39:25] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:26] SENT (0.0980s) TCP 192.168.20.33:59467 > 192.168.20.1:4840 S ttl=64 id=44204 iplen=52  seq=4233145375 win=1480
+[2026-03-02 14:39:26] 
+[2026-03-02 14:39:26] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:26] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:26] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:26] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:39:26] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:39:26] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:39:26] programa o archivo por lotes ejecutable.
+[2026-03-02 14:39:26] ==================================================
+[2026-03-02 14:39:26] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:39:30] ==================================================
+[2026-03-02 14:39:30] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:39:30] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:39:30] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:39:30] -----------------------------------------------------------------
+[2026-03-02 14:39:30] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:39:30] Starting Nmap 7.92 ( https://nmap.org ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:32] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:39:32] Nmap done: 1 IP address (1 host up) scanned in 1.62 seconds
+[2026-03-02 14:39:32] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:39:32] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:32] 
+[2026-03-02 14:39:32] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:33] SENT (0.0980s) TCP 192.168.20.33:27755 > 192.168.20.1:502 S ttl=64 id=5154 iplen=52  seq=1865644499 win=1480
+[2026-03-02 14:39:33] 
+[2026-03-02 14:39:33] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:33] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:33] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:33] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:39:33] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:33] 
+[2026-03-02 14:39:33] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:34] SENT (0.0940s) TCP 192.168.20.33:52252 > 192.168.20.1:102 S ttl=64 id=52396 iplen=52  seq=3523850702 win=1480
+[2026-03-02 14:39:34] 
+[2026-03-02 14:39:34] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:34] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:34] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:34] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:39:34] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:39:34] 
+[2026-03-02 14:39:34] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:39 Hora estándar romance
+[2026-03-02 14:39:35] SENT (0.0960s) TCP 192.168.20.33:1169 > 192.168.20.1:4840 S ttl=64 id=63925 iplen=52  seq=12690559 win=1480
+[2026-03-02 14:39:35] 
+[2026-03-02 14:39:35] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:39:35] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:39:35] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:39:35] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:39:35] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:39:35] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:39:35] programa o archivo por lotes ejecutable.
+[2026-03-02 14:39:35] ==================================================
+[2026-03-02 14:39:35] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:40:08] ==================================================
+[2026-03-02 14:40:08] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:40:08] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:40:08] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:40:08] -----------------------------------------------------------------
+[2026-03-02 14:40:08] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:40:08] Starting Nmap 7.92 ( https://nmap.org ) at 2026-03-02 14:40 Hora estándar romance
+[2026-03-02 14:40:10] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:40:10] Nmap done: 1 IP address (1 host up) scanned in 1.60 seconds
+[2026-03-02 14:40:10] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:40:10] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:40:10] 
+[2026-03-02 14:40:10] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:40 Hora estándar romance
+[2026-03-02 14:40:11] SENT (0.0940s) TCP 192.168.20.33:10909 > 192.168.20.1:502 S ttl=64 id=36349 iplen=52  seq=3090357817 win=1480
+[2026-03-02 14:40:11] 
+[2026-03-02 14:40:11] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:40:11] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:40:11] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:40:11] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:40:11] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:40:11] 
+[2026-03-02 14:40:11] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:40 Hora estándar romance
+[2026-03-02 14:40:12] SENT (0.0950s) TCP 192.168.20.33:10124 > 192.168.20.1:102 S ttl=64 id=42701 iplen=52  seq=256880879 win=1480
+[2026-03-02 14:40:12] 
+[2026-03-02 14:40:12] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:40:12] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:40:12] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:40:12] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:40:12] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:40:12] 
+[2026-03-02 14:40:12] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:40 Hora estándar romance
+[2026-03-02 14:40:13] SENT (0.0930s) TCP 192.168.20.33:3707 > 192.168.20.1:4840 S ttl=64 id=6078 iplen=52  seq=2624906000 win=1480
+[2026-03-02 14:40:13] 
+[2026-03-02 14:40:13] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:40:13] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:40:13] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:40:13] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:40:13] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:40:13] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:40:13] programa o archivo por lotes ejecutable.
+[2026-03-02 14:40:13] ==================================================
+[2026-03-02 14:40:13] [OK] ALL SCANS COMPLETE. STAY RADICAL.
+[2026-03-02 14:54:36] ==================================================
+[2026-03-02 14:54:36] [*] INITIATING SYNTHWAVE SCAN ON TARGET: 192.168.20.1
+[2026-03-02 14:54:36] [*] SELECTED PORTS: 21, 22, 80, 443, 3389, 102, 502, 4840
+[2026-03-02 14:54:36] [*] HUNTING FOR ICS & IT PROTOCOLS...
+[2026-03-02 14:54:36] -----------------------------------------------------------------
+[2026-03-02 14:54:36] [>] EXECUTING NMAP ATTACK & SCAN: nmap -p 21,22,80,443,3389,102,502,4840 -Pn -sV --open -T4 --script ftp-anon,ftp-bounce,ftp-syst,ftp-vsftpd-backdoor,ftp-proftpd-backdoor,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods,http-enum,http-title,http-methods,http-sql-injection,ssl-enum-ciphers,ssl-heartbleed,ssl-cert,rdp-enum-encryption,rdp-vuln-ms12-020,s7-info,modbus-discover 192.168.20.1
+[2026-03-02 14:54:36] Starting Nmap 7.92 ( https://nmap.org ) at 2026-03-02 14:54 Hora estándar romance
+[2026-03-02 14:54:37] Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[2026-03-02 14:54:37] Nmap done: 1 IP address (1 host up) scanned in 1.60 seconds
+[2026-03-02 14:54:37] [*] RUNNING ADVANCED MODBUS SCAN (NPING)...
+[2026-03-02 14:54:37] [>] EXECUTING MODBUS NPING SCAN: nping --tcp -p 502 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:54:38] 
+[2026-03-02 14:54:38] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:54 Hora estándar romance
+[2026-03-02 14:54:39] SENT (0.0980s) TCP 192.168.20.33:14573 > 192.168.20.1:502 S ttl=64 id=44590 iplen=52  seq=1190844350 win=1480
+[2026-03-02 14:54:39] 
+[2026-03-02 14:54:39] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:54:39] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:54:39] Nping done: 1 IP address pinged in 1.10 seconds
+[2026-03-02 14:54:39] [*] RUNNING ADVANCED S7 SCAN (NPING)...
+[2026-03-02 14:54:39] [>] EXECUTING S7 NPING SCAN: nping --tcp -p 102 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:54:39] 
+[2026-03-02 14:54:39] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:54 Hora estándar romance
+[2026-03-02 14:54:40] SENT (0.0940s) TCP 192.168.20.33:37727 > 192.168.20.1:102 S ttl=64 id=42214 iplen=52  seq=1139542555 win=1480
+[2026-03-02 14:54:40] 
+[2026-03-02 14:54:40] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:54:40] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:54:40] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:54:40] [*] RUNNING ADVANCED OPCUA SCAN (NPING & NC)...
+[2026-03-02 14:54:40] [>] EXECUTING OPCUA NPING SCAN: nping --tcp -p 4840 --data 000100000006010600010002 192.168.20.1 -c 1
+[2026-03-02 14:54:40] 
+[2026-03-02 14:54:40] Starting Nping 0.7.92 ( https://nmap.org/nping ) at 2026-03-02 14:54 Hora estándar romance
+[2026-03-02 14:54:41] SENT (0.0920s) TCP 192.168.20.33:13628 > 192.168.20.1:4840 S ttl=64 id=23828 iplen=52  seq=95987183 win=1480
+[2026-03-02 14:54:41] 
+[2026-03-02 14:54:41] Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+[2026-03-02 14:54:41] Raw packets sent: 1 (66B) | Rcvd: 0 (0B) | Lost: 1 (100.00%)
+[2026-03-02 14:54:41] Nping done: 1 IP address pinged in 1.09 seconds
+[2026-03-02 14:54:41] [*] SENDING OPCUA 'HEL' PACKET (NC)...
+[2026-03-02 14:54:41] [>] EXECUTING OPCUA NC SCAN: echo -n "HEL" | nc 192.168.20.1 4840
+[2026-03-02 14:54:41] "nc" no se reconoce como un comando interno o externo,
+[2026-03-02 14:54:41] programa o archivo por lotes ejecutable.
+[2026-03-02 14:54:41] ==================================================
+[2026-03-02 14:54:41] [OK] ALL SCANS COMPLETE. STAY RADICAL.
