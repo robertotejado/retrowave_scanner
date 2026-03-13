@@ -46,7 +46,7 @@ Para que esta máquina del tiempo funcione, tu sistema necesita algunas herramie
 
 1. Clona este repositorio para robarme el código (es broma, es Open Source):
 ```bash
-git clone https://github.com/retrowave_scanner/retrowave-scanner.git
+git clone https://github.com/robertotejado/retrowave_scanner.git
 cd retrowave-scanner
 
 ```
